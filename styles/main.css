@@ -10,7 +10,7 @@
   --color-background: #f0e7dd;
   --color-accent: #3B4919;
 
-  --border-radius: 1.75rem;
+  --border-radius: 0.3rem;
 
   --font-titles: "Parkinsans", sans-serif;
   --font-body: "Parkinsans", "Roboto", system-ui, sans-serif; /* system-ui matches the user's system font */
@@ -30,6 +30,15 @@ main {
 header {
   padding: 1rem;
   text-align: left;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  border-color: var(--color-accent);
 }
 
 main,
@@ -52,6 +61,7 @@ nav {
 p {
   margin: 1.5rem 0;
   align-items: left;
+  line-height: 1.8;
 }
 
 ul,
@@ -76,11 +86,11 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.75em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 h3 {
@@ -105,16 +115,20 @@ p {
 
 footer {
   text-align: center;
+  margin: 3rem;
 }
 
 .button-container {
-  text-align: center;
-  margin: 1rem 0; /* Add some space around the button */
+  text-align: left;
+  margin-top: 5rem; /* Add some space around the button */
 }
 
 .contact-button {
   background-color: var(--color-accent);
+  border-radius: var(--border-radius);
   color: white;
+  text-decoration: none;
+  /* display: inline-block; */
   padding: 0.5rem 1.5rem;
   font-size: 1.4rem;
 }
@@ -122,6 +136,18 @@ footer {
 .contact-button:hover {
   cursor: pointer;
   filter: brightness(120%);
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adds space between the icon and the text */
+  margin: 1.5rem 0; /* Matches paragraph margin for consistent spacing */
+}
+
+.icon-link img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 blockquote {
@@ -138,8 +164,16 @@ a:hover {
   text-decoration: none;
 }
 
-img {
+.back-home {
+    text-decoration: none;
+
+}
+
+.shira-img {
   border-radius: var(--border-radius);
+  margin: 2rem;
+  width: 25%;
+  height: 25%
 }
 
 /* Tables */
