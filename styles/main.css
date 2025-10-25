@@ -10,7 +10,7 @@
   --color-background: #f0e7dd;
   --color-accent: #3B4919;
 
-  --border-radius: 0.5rem;
+  --border-radius: 1.75rem;
 
   --font-titles: "Parkinsans", sans-serif;
   --font-body: "Parkinsans", "Roboto", system-ui, sans-serif; /* system-ui matches the user's system font */
@@ -50,7 +50,7 @@ nav {
 
 /* Text */
 p {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   align-items: left;
 }
 
@@ -100,21 +100,26 @@ h6 {
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 footer {
   text-align: center;
 }
 
+.button-container {
+  text-align: center;
+  margin: 1rem 0; /* Add some space around the button */
+}
+
 .contact-button {
   background-color: var(--color-accent);
   color: white;
-  text-align: center;
-  display: block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.4rem;
 }
 
-button :hover {
+.contact-button:hover {
   cursor: pointer;
   filter: brightness(120%);
 }
@@ -131,6 +136,10 @@ a {
 }
 a:hover {
   text-decoration: none;
+}
+
+img {
+  border-radius: var(--border-radius);
 }
 
 /* Tables */
@@ -158,23 +167,4 @@ select {
 fieldset {
   margin-top: 1.5rem;
   border: 1px solid var(--color-secondary);
-}
-
-.counter-button {
-  background-color: var(--color-accent);
-  width: 2rem;
-  height: 2rem;
-  color: white;
-  border: none;
-  border-radius: 1000px; /* Make the button round */
-  cursor: pointer;
-  font-weight: bold;
-
-  &:hover {
-    filter: brightness(120%);
-  }
-
-  &:active {
-    filter: brightness(80%);
-  }
 }
