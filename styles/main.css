@@ -38,7 +38,6 @@ header {
   gap: 2rem;
   max-width: 60rem;
   margin: 0 auto;
-  border-color: var(--color-accent);
 }
 
 main,
@@ -91,6 +90,7 @@ h1 {
 
 h2 {
   font-size: 1.75em;
+  line-height: 1.75;
 }
 
 h3 {
@@ -128,7 +128,6 @@ footer {
   border-radius: var(--border-radius);
   color: white;
   text-decoration: none;
-  /* display: inline-block; */
   padding: 0.5rem 1.5rem;
   font-size: 1.4rem;
 }
@@ -165,8 +164,21 @@ a:hover {
 }
 
 .back-home {
+    display: inline-block; /* Ensures margin-top is applied */
+    margin-top: 6rem;
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+    color: white;
     text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+}
 
+.section-divider {
+  max-width: 60rem;
+  margin: 1rem auto;
+  border-top: 2px solid var(--color-secondary);
+  opacity: 0.8;
 }
 
 .shira-img {
