@@ -10,23 +10,33 @@
   <body>
     <nav>
       <a href="index.html">Home</a>
+      <a href="projects.html">My projects</a>
       <a href="contact.html">Contact Me</a>
     </nav>
-    <header role="banner">
-        <h1>Contact Me</h1>
-    </header>
-    <main>
-      <p>You can connect with me on LinkedIn and check my GitHub profile!</p>
-      <div class="icon-link">
-        <img src="public/linkedin.png" alt="LinkedIn Icon" />
-        <a href="https://www.linkedin.com/in/shira-bercovici/">Shira Bercovici</a>
-      </div>
-      <div class="icon-link">
-        <img src="public/github.png" alt="GitHub Icon" />
-        <a href="https://github.com/shirabercovici">Shira Bercovici</a>
-      </div>
-      <p><a class="back-home" href="/">← Back to Home</a></p>
-    </main>
+    <div class="main-content">
+      <header role="banner">
+          <div class="header-with-icon">
+              <h1>Contact Me</h1>
+              <img src="public/telephone.png" alt="Phone Icon" class="header-icon">
+          </div>
+      </header>
+      <main>
+        <p>You can connect with me on LinkedIn and check my GitHub profile!</p>
+        <div class="contact-links-container">
+          <a href="https://www.linkedin.com/in/shira-bercovici/" class="contact-link-block" target="_blank">
+            <img src="public/linkedin.png" alt="LinkedIn Icon" />
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/shirabercovici" class="contact-link-block" target="_blank">
+            <img src="public/github.png" alt="GitHub Icon" />
+            <span>GitHub</span>
+          </a>
+        </div>
+        <p>I'm always open to connecting and discussing new opportunities.<br>
+          I look forward to hearing from you!</p>
+        <p><a class="back-home" href="/">← Back to Home</a></p>
+      </main>
+    </div>
     <footer>
       <p>© Created by Shira Bercovici 2025/26</p>
     </footer>
