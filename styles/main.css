@@ -234,7 +234,7 @@ footer {
   padding: 1rem 1.5rem;
   border-radius: var(--border-radius);
   /* background-color: var(--color-block); */
-  border: 3px solid var(--color-block);
+  border: 2px solid var(--color-block);
   color: var(--color-primary);
   text-align: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -249,8 +249,9 @@ footer {
 
 .project img {
   width: 100%;
-  height: 200px; /* Set a fixed height */
-  object-fit: cover; /* Crop image to fit, maintaining aspect ratio */ /* Show the top part of the image */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Crop image to fit, maintaining aspect ratio */
+  object-position: top; /* Show the top part of the image */
   margin: 1rem auto 0;
   display: block;
   border-radius: var(--border-radius);
@@ -262,7 +263,7 @@ footer {
 }
 .project-divider {
   border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid var(--color-secondary);
   margin: 1rem 0;
 }
 
