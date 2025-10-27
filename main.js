@@ -1,19 +1,21 @@
-console.log("Hello World!");
-setupCounter();
+import confetti from 'canvas-confetti';
 
-function setupCounter() {
-  let count = 0;
+const contactButton = document.querySelector('.contact-button');
 
-  function increment() {
-    count++;
-    document.querySelector("#count").innerHTML = count;
-  }
+if (contactButton) {
+  contactButton.addEventListener('click', (event) => {
+    // Prevent the link from navigating immediately
+    event.preventDefault();
 
-  function decrement() {
-    count--;
-    document.querySelector("#count").innerHTML = count;
-  }
+    // Launch the confetti
+    confetti();
 
-  document.querySelector("#increment").addEventListener("click", increment);
-  document.querySelector("#decrement").addEventListener("click", decrement);
+    // Add fade-out class to the body
+    document.body.classList.add('page-fade-out');
+
+    // After the animation, navigate to the contact page
+    setTimeout(() => {
+      window.location.href = contactButton.href;
+    }, 500); // This should match the animation duration
+  });
 }

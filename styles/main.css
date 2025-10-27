@@ -20,6 +20,25 @@ body {
   color: var(--color-primary);
   background-color: var(--color-background);
   font-family: var(--font-body);
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Layout */
@@ -135,6 +154,10 @@ footer {
 .contact-button:hover {
   cursor: pointer;
   filter: brightness(120%);
+}
+
+.page-fade-out {
+  animation: fade-out 0.5s ease-out forwards;
 }
 
 .icon-link {
