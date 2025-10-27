@@ -15,7 +15,7 @@ if (contactButton) {
 
     // After the animation, navigate to the contact page
     setTimeout(() => {
-      window.location.href = contactButton.href;
-    }, 500); // This should match the animation duration
+      window.location.href = contactButton.dataset.href;
+    }, 500);
   });
 }
