@@ -347,7 +347,7 @@ nav a:hover {
 
 .back-home {
     display: inline-block; /* Ensures margin-top is applied */
-    margin-top: 6rem;
+    margin-top: 2rem;
     background-color: var(--color-accent);
     border-radius: var(--border-radius);
     color: white;
