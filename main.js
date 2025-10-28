@@ -20,8 +20,11 @@ function handlePageNav(event) {
 function handleContactClick(event) {
     // Only prevent default if it's a link, to allow smooth scroll
     event.preventDefault();
-    confetti();
     const link = event.currentTarget;
+
+    if (link.classList.contains('contact-button')) {
+      confetti();
+    }
 
     // Add a short delay before scrolling to make it feel smoother
     setTimeout(() => {
