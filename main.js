@@ -1,16 +1,12 @@
 import confetti from 'canvas-confetti';
 
-const navButtons = document.querySelectorAll('.nav-button');
+const pageNavButtons = document.querySelectorAll('.nav-button:not(.contact-button)');
+const contactLinks = document.querySelectorAll('a[href="#contact"]');
 
-function handleNavClick(event, withConfetti = false) {
+function handlePageNav(event) {
   // Prevent the link from navigating immediately
   event.preventDefault();
   const button = event.currentTarget;
-
-  if (withConfetti) {
-    // Launch the confetti
-    confetti();
-  }
 
   // Add fade-out class to the body
   document.body.classList.add('page-fade-out');
@@ -21,10 +17,18 @@ function handleNavClick(event, withConfetti = false) {
   }, 500);
 }
 
-navButtons.forEach(button => {
-  button.addEventListener('click', (event) => {
-    // Check if the button is the contact button
-    const withConfetti = button.classList.contains('contact-button');
-    handleNavClick(event, withConfetti);
-  });
-});
+function handleContactClick(event) {
+    // Only prevent default if it's a link, to allow smooth scroll
+    event.preventDefault();
+    confetti();
+    const link = event.currentTarget;
+
+    // Add a short delay before scrolling to make it feel smoother
+    setTimeout(() => {
+      document.querySelector(link.hash)?.scrollIntoView({ behavior: 'smooth' });
+    }, 80); // 100ms delay
+}
+
+contactLinks.forEach(link => link.addEventListener('click', handleContactClick));
+
+pageNavButtons.forEach(button => button.addEventListener('click', handlePageNav));
