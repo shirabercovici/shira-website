@@ -45,9 +45,7 @@ body {
 }
 
 /* Layout */
-main {
-  padding: 1rem;
-  }
+main {}
 
 header {
   padding: 1rem;
@@ -92,7 +90,19 @@ nav {
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo img {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
   gap: 1rem;
 }
 
@@ -166,6 +176,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  margin-top: 0; /* Remove default top margin */
 }
 
 h4 {
@@ -282,7 +293,6 @@ footer {
 .contact-links-container {
   display: flex;
   gap: 1rem;
-  margin: 2rem 0;
   justify-content: left;
 }
 
